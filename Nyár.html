@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evforduló</title>
+    <link rel="stylesheet" href="stilus.css">
+    <div class="fejlec">
+        <button id="btn-nyar" class="fejlec-szoveg active">Nyár</button>
+        <button id="btn-osz" class="fejlec-szoveg">Ősz</button>
+        <button id="btn-tel" class="fejlec-szoveg">Tél</button>
+        <button id="btn-tavasz" class="fejlec-szoveg">Tavasz</button>
+    </div>
+</head>
+<body>
+  <!-- Photo Carousel -->
+
+<div class="carousel-wrap">
+  <div class="carousel-stage" id="stage">
+    <div class="carousel-item item-left"  id="slot-left"></div>
+    <div class="carousel-item item-main"  id="slot-main"></div>
+    <div class="carousel-item item-right" id="slot-right"></div>
+  </div>
+  <div class="carousel-controls">
+    <button id="btn-prev">&#8592;</button>
+    <div class="dots" id="dots"></div>
+    <button id="btn-next">&#8594;</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
