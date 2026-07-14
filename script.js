@@ -1,9 +1,9 @@
-  
-  const images = [
-    "https://res.cloudinary.com/de2obreh2/image/upload/v1781631023/IMG_4844_tz2gbc.jpg",
-    "https://res.cloudinary.com/de2obreh2/image/upload/v1781631021/IMG_4314_owxpl1.jpg",
-    "https://res.cloudinary.com/de2obreh2/image/upload/v1781631020/IMG_4801_zzhczi.jpg",
-    "https://res.cloudinary.com/de2obreh2/image/upload/v1781631018/att.cpCWvYZcpGDh34se9fRV5rJ3WPM1o4f97f-_MdVetWM_qtqydu.jpg"];
+fetch("nyar.txt")
+  .then(res => res.text())
+  .then(text => {
+    const images = text.split("\n").map(u => u.trim()).filter(Boolean);
+  });
+  console.log(urls)
 
   let evszak = "nyar";
   let idx = 0;
