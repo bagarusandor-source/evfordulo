@@ -3,7 +3,7 @@ fetch("nyar.txt")
   .then(text => {
     const images = text.split("\n").map(u => u.trim()).filter(Boolean);
   });
-  console.log(urls)
+  console.log(images)
 
   let evszak = "nyar";
   let idx = 0;
