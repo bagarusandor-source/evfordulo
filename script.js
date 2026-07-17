@@ -1,7 +1,7 @@
 fetch("nyar.txt")
   .then(res => res.text())
   .then(text => {
-    const images = text.split("\n").map(u => u.trim()).filter(Boolean);
+    let images = text.split("\n").map(u => u.trim()).filter(Boolean);
   });
   console.log(images)
 
