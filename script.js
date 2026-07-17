@@ -1,10 +1,4 @@
-fetch("nyar.txt")
-  .then(res => res.text())
-  .then(text => {
-    let images = text.split("\n").map(u => u.trim()).filter(Boolean);
-  });
-  console.log(images)
-
+  let images = [];
   let evszak = "nyar";
   let idx = 0;
 
@@ -13,6 +7,15 @@ fetch("nyar.txt")
     img.src = src;
     img.draggable = false;
     return img;
+  }
+
+  function loadSeason(){
+  fetch("nyar.txt")
+    .then(res => res.text())
+    .then(text => {
+      images = text.split("\n").map(u => u.trim()).filter(Boolean);
+    });
+  render();
   }
 
   function render() {
@@ -60,4 +63,4 @@ fetch("nyar.txt")
   document.getElementById('btn-tavasz').onclick = () => {switchSeason("tavasz");};
 
 
-  render();
+  loadSeason();
