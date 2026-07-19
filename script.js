@@ -21,8 +21,8 @@
   function render() {
     const n = images.length;
     ['slot-left','slot-main','slot-right'].forEach(id => document.getElementById(id).innerHTML = '');
-    document.getElementById('slot-left') .appendChild(makeImg(images[(idx - 1 + n) % n]));
-    document.getElementById('slot-main') .appendChild(makeImg(images[idx]));
+    document.getElementById('slot-left').appendChild(makeImg(images[(idx - 1 + n) % n]));
+    document.getElementById('slot-main').appendChild(makeImg(images[idx]));
     document.getElementById('slot-right').appendChild(makeImg(images[(idx + 1) % n]));
     document.getElementById('dots').innerHTML = '';
     images.forEach((_, i) => {
