@@ -10,7 +10,7 @@
   }
 
   function loadSeason(){
-  fetch("nyar.txt")
+  fetch(evszak + ".txt")
     .then(res => res.text())
     .then(text => {
       images = text.split("\n").map(u => u.trim()).filter(Boolean);
