@@ -14,8 +14,9 @@
     .then(res => res.text())
     .then(text => {
       images = text.split("\n").map(u => u.trim()).filter(Boolean);
+      render();
     });
-  render();
+
   }
 
   function render() {
@@ -54,6 +55,7 @@
     document.getElementById("btn-" + evszak).classList.remove("active");
     evszak = season;
     document.getElementById("btn-" + evszak).classList.add("active");
+    loadSeason();
 
 
   }
